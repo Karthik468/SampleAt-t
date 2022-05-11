@@ -47,7 +47,7 @@ class StudentDbProjectApplicationTests {
 		s.setSid(1);
 		s.setSname("Karthik");
 		s.setSbranch("ECE");
-		s.setScgpa("9");
+		s.setScgpa("8");
 		//when(repo.save(s)).thenReturn(s);
 		URI uri = new URI("/addStudents");
 		mvc.perform(MockMvcRequestBuilders.post(uri)
@@ -66,7 +66,7 @@ class StudentDbProjectApplicationTests {
     }
 	@Test
     public void getItem() throws Exception{
-        Student s = new Student(1,"Karthik","ECE","9");
+        Student s = new Student(1,"Karthik","ECE","9.6");
         repo.save(s);
     
        System.out.println(s);
